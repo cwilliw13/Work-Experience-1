@@ -1,5 +1,7 @@
 /* Calico Media marketing site */
 
+
+
 :root {
   --ink: #1f1a17;
   --ink-soft: #5b524c;
@@ -181,7 +183,7 @@ img {
   padding: 8px 12px;
   border-radius: 999px;
   color: var(--ink);
-  transition: 
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover,
@@ -434,18 +436,14 @@ img {
 
 .playbook-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-}
-
-.playbook-grid-media {
-max-width: 600px;
 }
 /* Card grid */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -828,6 +826,20 @@ max-width: 600px;
   }
 
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid,
+  .playbook-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid,
+  .playbook-grid {
     grid-template-columns: 1fr;
   }
 }
