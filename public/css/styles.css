@@ -255,7 +255,7 @@ img {
   display: flex;
   align-items: center;
   gap: 56px;
-  flex-direction: column-reverse;
+ 
 }
 
 .hero-text {
@@ -278,14 +278,13 @@ img {
   max-width: 600px;
 }
 .hero-image {
- height: 400px;
+
   width: 100%;
   border-radius: 24px;
   border: 1px solid var(--border);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.32);
   object-fit: cover;
   object-position: center;
-  aspect-ratio: 4 / 5;
   display: block;
   overflow-clip-margin: content-box;
   overflow: clip;
@@ -832,14 +831,22 @@ img {
 
 @media (max-width: 768px) {
   .card-grid,
-  .playbook-grid {
+  .playbook-grid,
+  .hero-inner {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .card-grid,
-  .playbook-grid {
+  .playbook-grid,
+  .hero-inner {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:1100px) {
+  .hero-inner {
+    flex-direction: column-reverse;
   }
 }
